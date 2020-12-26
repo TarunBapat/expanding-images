@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Expanding cards</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
+const panels=document.querySelectorAll('.panel');
+console.log(panels)
+panels.forEach((panel)=>{
+	panel.addEventListener('click',()=>{
+		removeActiveClasses();
+		panel.classList.add('active')
+	})
+})
 
-</body>
-</html>
+const removeActiveClasses=()=>{
+	panels.forEach((panel)=>{
+		panel.classList.remove('active');
+	})
+}
